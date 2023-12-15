@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <header><h1>Libraro </h1></header>
+
+       <div class="description">
+            <p>
+                This page is a project from TOP to create a library using Object Constructors and LocalStorage.
+            </p>
+       </div>
+        
+       <div class="input-grid">
+            <form action="index.html" id="review-form">
+                <div class="wrapper">
+                    <label for="book" class="heading">book</label>
+                    <input type="text" id="book" name="book">
+                </div>
+                
+                <div class="wrapper">
+                    <label for="author" class="heading">author</label>
+                    <input type="text" id="author" name="author">
+                </div>
+                
+                <div class="wrapper">
+                    <label for="read" class="heading">read status</label>
+                    <select id="read" name="read">
+                        <option value="notRead">not read</option>
+                        <option value="read">read</option>
+                    </select>
+                </div>
+
+                <div class="wrapper">
+                    <label for="rating" class="heading">rating</label>
+                    <input type="range" id="rating" name="rating">
+                </div>
+
+                <input type="button" name="submit" id="submit" value="submit">
+            </form>
+       </div>
+
+       <table id="display-table">
+            <tr>
+                <th class="heading">title</th>
+                <th class="heading">author</th>
+                <th class="heading">status</th>
+                <th class="heading">rating</th>
+                <th class="heading">&nbsp</th>
+            </tr>
+
+            <tr>
+                <th>shinzo</th>
+                <th>rinzo</th>
+                <th>chinjo</th>
+                <th>sai</th>
+                <th>jwo</th>
+            </tr>
+       </table>
+        
+        
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

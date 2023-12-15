@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    padding: 1rem;
+}
+#review-form{
+    display:block
+}
+.wrapper{
+    display: flex;
+    flex-direction:column;
+    padding-bottom: .75rem;
+}
+.heading{
+    text-transform: capitalize;
+    font-size: 1.12rem;
+    font-weight: bold;
+    
+}
+@media only screen and (min-width: 600px) {
+    #review-form{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .wrapper{
+        flex-direction: row;
+    }
+}
+
+
+
+
