@@ -4,10 +4,15 @@
 body{
     margin: 0px;
     padding: 0px;
+    background-color: var(--background-white);
+}
+:root{
+    --background-white: #f9f8fc;
+    --lines-gray: rgb(204, 198, 204);
 }
 
 .container{
-    padding: 1rem;
+    padding: 3rem;
 }
 #review-form{
     display:block
@@ -32,6 +37,25 @@ body{
         flex-direction: row;
     }
 }
+
+table{
+    margin-top:3rem;
+    width: 100%;
+    background-color: var(--background-white);
+    border-collapse: collapse;
+     
+}
+table tr{
+    height: 3.5rem;
+}
+tr,
+td,
+th{
+    text-align: left;
+    border-bottom: solid var(--lines-gray) 1.5px;
+}
+
+
 
 
 
