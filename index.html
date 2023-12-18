@@ -31,7 +31,7 @@
                 <div class="wrapper">
                     <label for="read" class="heading">read status</label>
                     <select id="read" name="read">
-                        <option value="notRead">not read</option>
+                        <option value="not read">not read</option>
                         <option value="read">read</option>
                     </select>
                 </div>
@@ -39,10 +39,10 @@
                 <div class="wrapper">
                     <div id="rating-output">
                         <label for="rating" class="heading">rating: </label>
-                        <div class="rating heading" id="rating-input">3</div>
+                        <div class="rating heading" id="rating-input">N/A</div>
                     </div>
                     
-                    <input type="range" min='1' max='5' step=".1" value='3' id="rating" name="rating">
+                    <input type="range" min='0' max='5' step=".1" value='0' id="rating" name="rating">
                 </div>
 
                 <!-- <input type="button" name="submit" id="submit" value="submit"> -->
@@ -53,6 +53,7 @@
         <div class='table-container'>
             <table id="display-table">
                 <tr>
+                    <th class="heading">id#</th>
                     <th class="heading">title</th>
                     <th class="heading">author</th>
                     <th class="heading">status</th>
@@ -60,7 +61,8 @@
                     <th class="heading">&nbsp</th>
                 </tr>
     
-                <tr>
+                <!-- <tr>
+                    <td>0</td>
                     <td>test1</td>
                     <td>rythroja</td>
                     <td>read</td>
@@ -69,12 +71,13 @@
                 </tr> 
 
                 <tr>
+                    <td>1</td>
                     <td>test2</td>
                     <td>rythroja</td>
                     <td>read</td>
                     <td>2</td>
                     <td class="delete">delete</td>
-                </tr>
+                </tr> -->
            </table>
         </div>
        

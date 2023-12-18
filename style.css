@@ -80,6 +80,18 @@ th{
     padding-left: 1rem;
 }
 
+.read,
+.notRead{
+    border: 1px;
+    border-radius: 4px;
+}
+.read{
+    color: green;
+}
+.notRead{
+    color: red;
+}
+
 
 
 

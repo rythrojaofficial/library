@@ -1,3 +1,6 @@
+let count = 0;
+
+
 const submitButton = document.getElementById('submit-button');
 const inputTitle = document.getElementById('book');
 const inputAuthor = document.getElementById('author');
@@ -11,15 +14,30 @@ const displayTable = document.getElementById('display-table');
     
 
 submitButton.addEventListener("click",()=>{
-    addRow();
+    addRow(inputTitle.innerText);
+    count += 1;
 });
 
+const library=[];
+// constructor
+function Book(title, author, status, rating){
+    this.title = title;
+    this.author = author;
+    this.status = status;
+    this.rating = rating;
+}
 
 
-function addRow() {
+
+
+
+function addRow(theTitle) {
+    // let new Book(theTitle, )
+
+
     let nextRow = document.createElement('tr');
 
-    let row = [inputTitle.value, inputAuthor.value,
+    let row = [count, inputTitle.value, inputAuthor.value,
         inputStatus.value, inputRating.value]
 
         for(let i = 0; i < row.length; i+=1){
@@ -31,7 +49,12 @@ function addRow() {
         del.innerText = 'delete';
         del.className = 'delete';
         del.addEventListener('click', ()=>{
-            displayTable.removeChild(nextRow)
+            let text;
+            if(confirm(`You are about to delete a row`)){
+                displayTable.removeChild(nextRow)
+            }
+            else return;
+            
         });
         nextRow.appendChild(del);
     
