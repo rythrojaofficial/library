@@ -13,6 +13,8 @@ body{
     --button-color:aqua;
     --button-hover:aquamarine;
     --table-background: rgb(224, 224, 230);
+    --read-color: green;
+    --unread-color:red; 
 }
 #submit-button{
     background-color: var(--button-color);
@@ -86,10 +88,10 @@ th{
     border-radius: 4px;
 }
 .read{
-    color: green;
+    color: var(--read-color);
 }
 .notRead{
-    color: red;
+    color: var(--unread-color);
 }
 
 
