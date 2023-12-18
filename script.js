@@ -7,6 +7,7 @@ const inputRating = document.getElementById('rating')
     inputRating.addEventListener('input', ()=>{sliderOutput.innerText = inputRating.value
     })
 const displayTable = document.getElementById('display-table');
+
     
 
 submitButton.addEventListener("click",()=>{
@@ -29,6 +30,9 @@ function addRow() {
     let del = document.createElement('td');
         del.innerText = 'delete';
         del.className = 'delete';
+        del.addEventListener('click', ()=>{
+            displayTable.removeChild(nextRow)
+        });
         nextRow.appendChild(del);
     
     displayTable.appendChild(nextRow);
