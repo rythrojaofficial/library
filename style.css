@@ -14,7 +14,10 @@ body{
     --button-hover:aquamarine;
     --table-background: rgb(224, 224, 230);
     --read-color: green;
-    --unread-color:red; 
+    --unread-color:rgb(126, 126, 126); 
+    --well-rated: green;
+    --okay-rated:rgb(163, 111, 13);
+    --poorly-rated:red;
 }
 #submit-button{
     background-color: var(--button-color);
@@ -90,8 +93,18 @@ th{
 .read{
     color: var(--read-color);
 }
-.notRead{
+.notRead,
+.notRated{
     color: var(--unread-color);
+}
+.rated-poorly{
+    color: var(--poorly-rated);
+}
+.rated-okay{
+    color: var(--okay-rated);
+}
+.rated-well{
+    color: var(--well-rated);
 }
 
 
