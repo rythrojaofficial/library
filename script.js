@@ -38,29 +38,31 @@ function addRow() {
 
     let nextRow = document.createElement('tr');
     let del = document.createElement('td');
-    let row = [library.length, inputTitle.value, inputAuthor.value,
-        inputStatus.value, sliderOutput.innerText, del]
+    let row = [library.length, currentBook.title, currentBook.author,
+        currentBook.status, currentBook.rating, del]
 
         // read status 
         for(let i = 0; i < row.length; i+=1){
             let td = document.createElement('td');
-                td.innerText = row[i];
-                if(td.innerText === 'read'){
-                    td.classList.add('read');
-                }else if(td.innerText === 'not read'){
-                    td.classList.add('notRead');
+            let p = document.createElement('p');
+                p.innerText = row[i];
+                if(p.innerText === 'read'){
+                    p.classList.add('read');
+                }else if(p.innerText === 'not read'){
+                    p.classList.add('notRead');
                 } 
+                td.appendChild(p);
             if (i===3){
                 td.classList.add('status');
                 td.addEventListener('click', ()=>{
-                    if (td.innerText === 'read'){
-                        td.innerText = 'not read';
-                        td.classList.remove('read');
-                        td.classList.add('notRead');
-                    }else if (td.innerText === 'not read'){
-                        td.innerText = 'read';
-                        td.classList.remove('notRead');
-                        td.classList.add('read');
+                    if (p.innerText === 'read'){
+                        p.innerText = 'not read';
+                        p.classList.remove('read');
+                        p.classList.add('notRead');
+                    }else if (p.innerText === 'not read'){
+                        p.innerText = 'read';
+                        p.classList.remove('notRead');
+                        p.classList.add('read');
 
                     }else return
                 })
@@ -83,9 +85,9 @@ function addRow() {
             }
             // delete row
             if (i==5){
-                td.innerText = 'delete';
-                td.className = 'delete';
-                td.addEventListener('click', ()=>{
+                p.innerText = 'delete';
+                p.className = 'delete';
+                p.addEventListener('click', ()=>{
                     let text;
                     if(confirm(`You are about to delete entry ${del.parentElement.firstChild.innerText}`)){
                         displayTable.removeChild(nextRow);

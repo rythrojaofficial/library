@@ -10,14 +10,16 @@ body{
     --background-white: #f9f8fc;
     --lines-gray: rgb(204, 198, 204);
     --rating: rgb(163, 141, 13);
-    --button-color:aqua;
-    --button-hover:aquamarine;
+    --button-color:rgb(140, 206, 206);
+    --button-hover:rgb(80, 199, 159);
     --table-background: rgb(224, 224, 230);
     --read-color: green;
     --unread-color:rgb(126, 126, 126); 
     --well-rated: green;
     --okay-rated:rgb(163, 111, 13);
     --poorly-rated:red;
+    --delete-hover:red;
+    --black: rgb(131, 131, 131);
 }
 #submit-button{
     background-color: var(--button-color);
@@ -86,18 +88,34 @@ th{
 }
 
 .read,
-.notRead{
-    border: 1px;
-    border-radius: 4px;
+.notRead,
+.delete{
+    border: .15rem solid var(--lines-gray);
+    border-radius: .5rem;
+    background-color: var(--background-white);
+    justify-content: left;
+    line-height: 2em;
+    /* text-transform: uppercase; */
+    padding-left: .25rem;
 }
+.read:hover,
+.notRead:hover{
+    border-color: var(--black);
+}
+.delete:hover{
+    color: var(--delete-hover);
+    border-color: var(--black);
+}
+
 .read{
     color: var(--read-color);
 }
-.notRead,
+
 .notRated{
     color: var(--unread-color);
 }
-.rated-poorly{
+.rated-poorly,
+.notRead{
     color: var(--poorly-rated);
 }
 .rated-okay{
